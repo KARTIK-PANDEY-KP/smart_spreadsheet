@@ -28,7 +28,7 @@ app.add_middleware(
 )
 
 # Check if API key is set
-api_key = os.getenv("OPENAI_API_KEY")
+api_key = os.getenv("OPENAI_API_KEY", "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")
 if not api_key:
     logger.error("OPENAI_API_KEY environment variable is not set")
     raise ValueError("OPENAI_API_KEY environment variable is not set")
